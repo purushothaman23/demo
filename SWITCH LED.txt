@@ -1,0 +1,32 @@
+
+
+int16 x_pin = PA0;
+int led = PC13;
+
+
+void setup() {
+  
+
+  Serial.begin(9600);
+  pinMode(PA0, INPUT);
+  pinMode(led,OUTPUT);
+
+
+  // put your setup code here, to run once:
+
+}
+
+void loop() {
+  int x_data = analogRead(PA0);
+ if(x_data > 1000){
+   digitalWrite(led,HIGH);
+   
+ }
+ else {
+ digitalWrite(led,LOW);
+ }
+  delay(100);
+  // put your main code here, to run repeatedly:
+
+}
+
